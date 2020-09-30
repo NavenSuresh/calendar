@@ -102,9 +102,6 @@ def get_input():
 def second_working_day(lis, inp_str1):
 	count = 1
 	flag = 0
-	print(inp_year_int)
-	print(inp_month_int)
-	print(count)
 	for count in range(1, 31):
 		a = datetime.datetime(inp_year_int, inp_month_int, count)
 		res_day_str = a.strftime("%A")
@@ -113,7 +110,7 @@ def second_working_day(lis, inp_str1):
 			if new_day not in lis:
 				flag += 1
 				if flag == 2:
-					print(new_day)
+					print("The second working day of the given month and year is: " + new_day)
 					break
 		count += 1 
 	
